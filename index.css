@@ -1,0 +1,196 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.home-container1 {
+  top: 179px;
+  flex: 0 0 auto;
+  right: 0px;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-self: center;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-container2 {
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.home-text {
+  margin: var(--dl-space-space-oneandhalfunits);
+  font-size: 90px;
+  align-self: center;
+  font-family: "Merriweather";
+  border-radius: var(--dl-radius-radius-radius4);
+  animation-name: flipInX;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.home-text1 {
+  color: var(--dl-color-sea-2);
+}
+.home-text2 {
+  color: var(--dl-color-sea-6);
+}
+.home-text3 {
+  width: var(--dl-size-size-maxwidth);
+  align-self: center;
+  text-align: center;
+  margin-left: var(--dl-space-space-oneandhalfunits);
+  margin-right: var(--dl-space-space-oneandhalfunits);
+  margin-bottom: var(--dl-space-space-oneandhalfunits);
+}
+.home-container3 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+.home-container4 {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.home-button {
+  width: var(--dl-size-size-xlarge);
+  height: var(--dl-size-size-small);
+  align-self: center;
+  background-color: transparent;
+}
+.home-button1 {
+  width: var(--dl-size-size-xlarge);
+  height: var(--dl-size-size-small);
+  margin: var(--dl-space-space-twounits);
+  padding: var(--dl-space-space-halfunit);
+  align-self: center;
+}
+.home-button2 {
+  width: var(--dl-size-size-xlarge);
+  height: var(--dl-size-size-small);
+  align-self: center;
+}
+.home-lottie-node {
+  left: 0px;
+  right: 0px;
+  width: 492px;
+  bottom: 103px;
+  height: 233px;
+  margin: auto;
+  opacity: 1;
+  z-index: 100;
+  position: absolute;
+  animation-name: none;
+  animation-delay: 0s;
+  animation-duration: 300ms;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+.home-container5 {
+  flex: 0 0 auto;
+  left: 0px;
+  width: 100%;
+  bottom: 0px;
+  height: 100px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  justify-content: center;
+}
+.home-navlink {
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  border-width: 0px;
+  text-decoration: none;
+}
+@media(max-width: 1600px) {
+  .home-button {
+    width: var(--dl-size-size-xlarge);
+    height: var(--dl-size-size-small);
+    margin-top: var(--dl-space-space-oneandhalfunits);
+    margin-left: var(--dl-space-space-oneandhalfunits);
+    margin-right: var(--dl-space-space-oneandhalfunits);
+    margin-bottom: 0px;
+  }
+  .home-button2 {
+    margin-bottom: var(--dl-space-space-oneandhalfunits);
+  }
+}
+@media(max-width: 1200px) {
+  .home-container2 {
+    margin-top: var(--dl-space-space-halfunit);
+    margin-left: var(--dl-space-space-twounits);
+    margin-right: var(--dl-space-space-twounits);
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .home-text {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    font-size: 90px;
+    align-self: center;
+    text-align: center;
+    font-family: Merriweather;
+  }
+  .home-text1 {
+    color: var(--dl-color-sea-2);
+  }
+  .home-text2 {
+    color: var(--dl-color-sea-6);
+  }
+  .home-text3 {
+    width: 100%;
+  }
+  .home-container3 {
+    height: 100%;
+    margin: var(--dl-space-space-twounits);
+  }
+  .home-container4 {
+    width: auto;
+    margin: 10%;
+  }
+  .home-button {
+    width: 100%;
+    height: 100%;
+  }
+  .home-button1 {
+    width: 100%;
+    height: 100%;
+    margin: 20%;
+  }
+  .home-button2 {
+    width: 100%;
+    height: 100%;
+  }
+  .home-lottie-node {
+    left: 0px;
+    width: auto;
+    bottom: 103px;
+    height: 30%;
+    position: 0px;
+  }
+  .home-navlink {
+    margin: var(--dl-space-space-oneandhalfunits);
+  }
+}
