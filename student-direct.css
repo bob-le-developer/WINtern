@@ -1,0 +1,41 @@
+.student-direct-feature-card {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  max-width: var(--dl-size-size-maxwidth);
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.student-direct-icon {
+  width: 24px;
+  height: 24px;
+}
+.student-direct-text {
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+}
+.student-direct-root-class-name {
+  width: 100%;
+}
+
+@media(max-width: 1600px) {
+  .student-direct-icon {
+    height: 24px100%;
+  }
+}
+@media(max-width: 1200px) {
+  .student-direct-icon {
+    width: 100%;
+  }
+  .student-direct-button {
+    border-width: 0px;
+    background-color: transparent;
+  }
+}
+@media(max-width: 479px) {
+  .student-direct-text {
+    font-style: normal;
+    font-weight: 600;
+  }
+}

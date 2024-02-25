@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jobs-Listing - Wintern</title>
+    <meta property="og:title" content="Jobs-Listing - Wintern" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+        /* Reset CSS */
+    </style>
+    <style data-tag="default-style-sheet">
+        /* Default Styles */
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap" data-tag="font" />
+    <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+</head>
+<body>
+<link rel="stylesheet" href="./style.css" />
+<div>
+    <link href="./jobs-listing.css" rel="stylesheet" />
+
+    <div class="jobs-listing-container">
+        <div class="jobs-listing-container1">
+            <select id="category-select" class="jobs-listing-select Options">
+                <option value="Programming">Programming</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Art">Art</option>
+            </select>
+            <select id="payment-select" class="jobs-listing-select1 Options">
+                <option value="Paid">Paid</option>
+                <option value="Unpaid">Unpaid</option>
+            </select>
+            <select id="age-select" class="jobs-listing-select2 Options">
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="18+">18+</option>
+            </select>
+        </div>
+        <div class="jobs-listing-blog">
+            <div class="job-post-blog-post-card job-post-root-class-name3" data-category="Business Administration" data-payment="Paid" data-min-age="15">
+                <img
+                        alt="image"
+                        src="https://i.stack.imgur.com/mwFzF.png"
+                        image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+                        class="job-post-image"
+                />
+                <div class="job-post-container">
+                    <div class="job-post-container1">
+                        <span class="job-post-text"><span>ENTERPRISE</span></span>
+                        <span class="job-post-text1"><span>3 days ago</span></span>
+                    </div>
+                    <h1 class="job-post-text2">
+                        <span>A</span>
+                    </h1>
+                    <span class="job-post-text3">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  non volutpat turpis. Mauris luctus rutrum mi ut rhoncus.
+                  Integer in dignissim tortor. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing ...
+                </span>
+              </span>
+                    <div class="job-post-container2">
+                        <div class="job-post-profile">
+                            <img
+                                    alt="bob"
+                                    src="https://i.stack.imgur.com/mwFzF.png"
+                                    class="job-post-image1"
+                            />
+                            <span class="job-post-text4"><span>bob</span></span>
+                        </div>
+                        <span class="job-post-text5">Read More -&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Other job posts with similar structure -->
+        </div>
+    </div>
+</div>
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+    // Function to filter job posts based on selected options
+    function filterJobPosts() {
+        const category = document.getElementById('category-select').value;
+        const payment = document.getElementById('payment-select').value;
+        const minAge = parseInt(document.getElementById('age-select').value);
+
+        // Hide all job posts
+        const jobPosts = document.querySelectorAll('.job-post-blog-post-card');
+        jobPosts.forEach(post => {
+            const postCategory = post.getAttribute('data-category');
+            const postPayment = post.getAttribute('data-payment');
+            const postMinAge = parseInt(post.getAttribute('data-min-age'));
+
+            if (postCategory === category && postPayment === payment && postMinAge <= minAge) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+
+    // Add event listeners to select elements
+    document.getElementById('category-select').addEventListener('change', filterJobPosts);
+    document.getElementById('payment-select').addEventListener('change', filterJobPosts);
+    document.getElementById('age-select').addEventListener('change', filterJobPosts);
+
+    // Initial filtering on page load
+    filterJobPosts();
+</script>
+<script
+        defer=""
+        src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BusinessPost - Wintern</title>
+    <meta property="og:title" content="BusinessPost - Wintern" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <!-- Reset CSS -->
+    <style data-tag="reset-style-sheet">
+        /* Reset CSS */
+    </style>
+    
+    <!-- Default Styles -->
+    <style data-tag="default-style-sheet">
+        /* Default Styles */
+    </style>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap" data-tag="font" />
+    
+    <!-- Teleport Custom Scripts -->
+    <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+</head>
+<body>
+<link rel="stylesheet" href="./style.css" />
+<div>
+    <!-- Business Post Styles -->
+    <link href="./business-post.css" rel="stylesheet" />
+
+    <div class="business-post-container">
+        <div class="business-post-container01">
+            <div class="business-post-container02">
+                <div class="business-post-container03">
+                    <!-- Job Title -->
+                    <span class="business-post-text">Job Title</span>
+                </div>
+                <!-- Input for job title -->
+                <input
+                    type="text"
+                    id="job-title"
+                    placeholder="Input the Title of Your Job Here"
+                    class="business-post-textinput input"
+                />
+            </div>
+            <div class="business-post-container04">
+                <div class="business-post-container05">
+                    <!-- Job Description -->
+                    <span class="business-post-text1">Job Description</span>
+                </div>
+                <!-- Textarea for job description -->
+                <textarea
+                    id="job-description"
+                    placeholder="Enter Details of Your Job Including Hours, Wage, Qualifications, etc."
+                    class="business-post-textarea textarea"
+                ></textarea>
+            </div>
+            <div class="business-post-container06">
+                <div class="business-post-container07">
+                    <!-- Upload Images -->
+                    <span class="business-post-text2">Upload Images</span>
+                </div>
+                <!-- Input for image upload -->
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+            <div class="business-post-container08">
+                <div class="business-post-container09">
+                    <!-- Select Tags -->
+                    <span class="business-post-text3">Select Tags</span>
+                </div>
+                <div class="business-post-container10">
+                    <!-- Select dropdowns for tags, payment type, and age requirement -->
+                    <select id="tag1" class="business-post-select">
+                        <option value="Programming">Programming</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="Art">Art</option>
+                    </select>
+                    <select id="tag2" class="business-post-select1">
+                        <option value="Programming">Programming</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="Art">Art</option>
+                    </select>
+                    <select id="tag3" class="business-post-select2">
+                        <option value="Programming">Programming</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="Art">Art</option>
+                    </select>
+                    <select id="payment-type" class="business-post-select3">
+                        <option value="Paid">Paid</option>
+                        <option value="Unpaid">Unpaid</option>
+                    </select>
+                    <select id="age-requirement" class="business-post-select4">
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="18+">18+</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Button to submit the form -->
+            <button type="button" onclick="submitJobPost()" class="business-post-button button">
+                Submit
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+    // JavaScript function to submit job post
+    function submitJobPost() {
+        // Retrieve values from input fields
+        const title = document.getElementById('job-title').value;
+        const description = document.getElementById('job-description').value;
+        const image = document.getElementById('image-upload').files[0];
+        const tag1 = document.getElementById('tag1').value;
+        const tag2 = document.getElementById('tag2').value;
+        const tag3 = document.getElementById('tag3').value;
+        const paymentType = document.getElementById('payment-type').value;
+        const ageRequirement = document.getElementById('age-requirement').value;
+
+        // For demonstration, you can log the values to the console
+        console.log('Title:', title);
+        console.log('Description:', description);
+        console.log('Image:', image);
+        console.log('Tags:', tag1, tag2, tag3);
+        console.log('Payment Type:', paymentType);
+        console.log('Age Requirement:', ageRequirement);
+
+        // Here you can send the data to a server for further processing, like saving it to a database
+        // For image upload, you would typically send the file to a server endpoint using AJAX or FormData
+    }
+</script>
+<!-- Teleport Custom Scripts -->
+<script
+        defer=""
+        src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+></script>
+</body>
+</html>

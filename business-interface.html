@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- Document type declaration specifying HTML5 -->
+<html lang="en"> <!-- Opening HTML tag with language attribute set to English -->
+
+<head> <!-- Head section containing metadata and link references -->
+    <title>Business-Interface - Wintern</title> <!-- Title of the webpage -->
+    <meta property="og:title" content="Business-Interface - Wintern" /> <!-- Open Graph meta tag for social media sharing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport meta tag for responsive design -->
+    <meta charset="utf-8" /> <!-- Character encoding for the document -->
+    <meta property="twitter:card" content="summary_large_image" /> 
+    
+    <!-- Internal styles for resetting default browser styles -->
+    <style data-tag="reset-style-sheet">
+        /* CSS reset styles */
+    </style>
+    
+    <!-- Default styles for the document -->
+    <style data-tag="default-style-sheet">
+        /* Default styles for HTML and body elements */
+    </style>
+    
+    <!-- Link to external CSS file for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+    
+    <!-- Link to Google Fonts API for font styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+    
+    <!-- Link to external CSS file for additional font styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;display=swap" data-tag="font" />
+    
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="./style.css" />
+    
+    <!-- Link to custom CSS file for business interface styles -->
+    <link href="./business-interface.css" rel="stylesheet" />
+</head>
+
+<body> <!-- Body section of the webpage -->
+    <div> <!-- Main container -->
+        <!-- Container for business interface -->
+        <div class="business-interface-container">
+            <!-- Hero section of business interface -->
+            <div class="business-interface-hero">
+                <!-- Nested container for hero content -->
+                <div class="business-interface-container1">
+                    <!-- Main heading -->
+                    <h1 class="business-interface-text">Welcome to Your Homepage</h1>
+                    <!-- Subheading -->
+                    <h2 class="business-interface-text01">Manage your interns here or post new opportunities</h2>
+                    <!-- Button group for navigation -->
+                    <div class="business-interface-btn-group">
+                        <!-- Button to view interns -->
+                        <a href="classlist.html" class="business-interface-navlink button">View Interns</a>
+                        <!-- Button to post offer -->
+                        <a href="business-post.html" class="business-interface-navlink1 button">Post Offer</a>
+                    </div>               
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script tag for custom scripts -->
+    <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+</body>
+
+</html>

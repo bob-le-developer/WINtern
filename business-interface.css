@@ -1,0 +1,228 @@
+/* 
+   Styles for the container of the business interface section.
+   - Set the container to occupy the full width of its parent.
+   - Make it a flex container to allow for flexible layout.
+   - Enable horizontal scrolling if content overflows.
+   - Ensure a minimum height of the viewport.
+   - Align items vertically at the center.
+   - Arrange flex items vertically.
+*/
+.business-interface-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* 
+   Styles for the hero section within the business interface.
+   - Ensure the hero section spans the full width.
+   - Set a fixed height for the hero section.
+   - Make it a flex container.
+   - Add padding using custom variable values.
+   - Limit the maximum width of the hero section.
+   - Ensure a minimum height to avoid collapse.
+   - Align items vertically at the center.
+   - Arrange flex items horizontally with space between them.
+*/
+.business-interface-hero {
+  width: 100%;
+  height: 1001px;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  max-width: var(--dl-size-size-maxwidth);
+  min-height: 80vh;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* 
+   Additional styles for the inner container within the hero section.
+   - Make it a flex container.
+   - Adjust left margin spacing.
+   - Arrange flex items vertically.
+*/
+.business-interface-container1 {
+  display: flex;
+  margin-left: var(--dl-space-space-twounits);
+  flex-direction: column;
+}
+
+/* 
+   Styles for the main heading text.
+   - Set color using custom variable.
+   - Define font size and family.
+*/
+.business-interface-text {
+  color: var(--dl-color-sea-2);
+  font-size: 3rem;
+  font-family: "Merriweather";
+}
+
+/* 
+   Styles for the secondary heading text.
+   - Set color using custom variable.
+   - Adjust margin spacing.
+   - Define font weight.
+*/
+.business-interface-text01 {
+  color: var(--dl-color-sea-3);
+  margin-top: var(--dl-space-space-unit);
+  font-weight: 600;
+  margin-bottom: var(--dl-space-space-unit);
+}
+
+/* 
+   Styles for the button group.
+   - Make it a flex container.
+   - Adjust margin spacing.
+   - Align items vertically at the center.
+   - Arrange flex items horizontally.
+*/
+.business-interface-btn-group {
+  display: flex;
+  margin-top: var(--dl-space-space-unit);
+  align-items: center;
+  margin-bottom: var(--dl-space-space-unit);
+  flex-direction: row;
+}
+
+/* 
+   Styles for navigation links (buttons).
+   - Set color and transition effect.
+   - Add padding for spacing.
+   - Set border color.
+   - Remove text decoration.
+   - Define background color.
+*/
+.business-interface-navlink {
+  color: var(--dl-color-gray-white);
+  transition: 0.3s;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-sea-4);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+  background-color: var(--dl-color-gray-black);
+}
+
+/* 
+   Hover styles for navigation links (buttons).
+   - Scale effect on hover.
+*/
+.business-interface-navlink:hover {
+  transform: scale(1.02);
+}
+
+/* 
+   Additional styles for the secondary navigation link (button).
+   - Add transition effect.
+   - Adjust margin spacing.
+   - Remove text decoration.
+*/
+.business-interface-navlink1 {
+  transition: 0.3s;
+  margin-left: var(--dl-space-space-unit);
+  padding-top: var(--dl-space-space-unit);
+  padding-left: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-twounits);
+  padding-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+
+/* 
+   Hover styles for the secondary navigation link (button).
+   - Scale effect on hover.
+*/
+.business-interface-navlink1:hover {
+  transform: scale(1.02);
+}
+
+/* 
+   Styles for additional text content.
+   - Adjust margin spacing.
+   - Add padding for spacing.
+*/
+.business-interface-text02 {
+  margin-top: var(--dl-space-space-twounits);
+  margin-bottom: var(--dl-space-space-twounits);
+  padding-right: var(--dl-space-space-threeunits);
+}
+
+/* 
+   Media query for devices with a maximum width of 991px.
+   - Adjust padding and flex direction for responsiveness.
+   - Center align inner container and remove left margin.
+   - Remove right margin and add bottom margin to the inner container.
+   - Center align text content.
+   - Center align text content of secondary heading.
+   - Center align additional text content and adjust padding.
+*/
+@media(max-width: 991px) {
+  .business-interface-hero {
+    padding: var(--dl-space-space-threeunits);
+    flex-direction: column;
+  }
+  .business-interface-container1 {
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: var(--dl-space-space-twounits);
+  }
+  .business-interface-text {
+    text-align: center;
+  }
+  .business-interface-text01 {
+    text-align: center;
+  }
+  .business-interface-text02 {
+    text-align: center;
+    padding-left: var(--dl-space-space-fourunits);
+  }
+}
+
+/* 
+   Media query for devices with a maximum width of 767px.
+   - Adjust padding for responsiveness.
+*/
+@media(max-width: 767px) {
+  .business-interface-hero {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+}
+
+/* 
+   Media query for devices with a maximum width of 479px.
+   - Adjust padding for responsiveness.
+   - Adjust margin for inner container.
+   - Change flex direction for button group.
+   - Adjust margin and alignment for secondary navigation link.
+   - Adjust padding for additional text content.
+*/
+@media(max-width: 479px) {
+  .business-interface-hero {
+    padding-top: var(--dl-space-space-twounits);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-twounits);
+  }
+  .business-interface-container1 {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .business-interface-btn-group {
+    flex-direction: column;
+  }
+  .business-interface-navlink1 {
+    margin-top: var(--dl-space-space-unit);
+    margin-left: 0px;
+  }
+  .business-interface-text02 {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+  }
+}

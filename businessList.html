@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .student-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .student-info {
+      margin-right: 20px;
+    }
+    .delete-button {
+      padding: 6px 12px;
+      background-color: #2C3259;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .add-student-container {
+      margin-top: 20px;
+    }
+    .add-student-input {
+      width: 200px;
+      margin-right: 10px;
+      padding: 6px;
+    }
+    .add-student-button {
+      padding: 6px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="studentList">
+    <!-- Student list will be displayed here -->
+  </div>
+
+  <div class="add-student-container">
+    <input type="text" id="newStudentName" class="add-student-input" placeholder="Business Name">
+    <input type="email" id="newStudentEmail" class="add-student-input" placeholder="Business Email">
+    <button onclick="addStudent()" class="add-student-button">Add Business</button>
+  </div>
+
+  <script>
+    // Sample array of students with names and emails
+    var students = [
+      { name: "business_user", email: "sampleemail@gmail.com" }
+    ];
+
+    // Function to display the student list
+    function displayStudentList() {
+      var studentListContainer = document.getElementById("studentList");
+      studentListContainer.innerHTML = "";
+
+      students.forEach(function(student, index) {
+        var listItem = document.createElement("div");
+        listItem.className = "student-item";
+
+        var studentInfo = document.createElement("div");
+        studentInfo.className = "student-info";
+        studentInfo.textContent = student.name + " - " + student.email;
+        listItem.appendChild(studentInfo);
+
+        var deleteButton = document.createElement("button");
+        deleteButton.className = "delete-button";
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function() {
+          deleteStudent(index);
+        };
+        listItem.appendChild(deleteButton);
+
+        studentListContainer.appendChild(listItem);
+      });
+    }
+
+    // Function to delete a student
+    function deleteStudent(index) {
+      students.splice(index, 1);
+      displayStudentList();
+    }
+
+    // Function to add a new student
+    function addStudent() {
+      var newName = document.getElementById("newStudentName").value;
+      var newEmail = document.getElementById("newStudentEmail").value;
+
+      // Email verification
+      if (!validateEmail(newEmail)) {
+        alert("Invalid email format");
+        return;
+      }
+
+      students.push({ name: newName, email: newEmail });
+      displayStudentList();
+
+      // Clear input fields
+      document.getElementById("newStudentName").value = "";
+      document.getElementById("newStudentEmail").value = "";
+    }
+
+    // Function to validate email format
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }
+
+    // Initial display of student list
+    displayStudentList();
+  </script>
+</body>
+</html>
